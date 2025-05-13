@@ -1424,17 +1424,6 @@
             });
         });
         
-        // Cookie modal
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('cookieModal').style.display = 'flex';
-            }, 2000);
-        });
-        
-        document.querySelector('.close-modal').addEventListener('click', function() {
-            document.getElementById('cookieModal').style.display = 'none';
-        });
-        
         // Handle navigation to legal pages
         document.querySelectorAll('a[href="#imprint"], a[href="#privacy-policy"]').forEach(link => {
             link.addEventListener('click', function(e) {
