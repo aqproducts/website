@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ Markets: Your Guide to Elite Forex Brokers</title>
+    <link rel="icon" href="AQMarketsIcon.png" type="image/png">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #17a2b8;
+            --dark: #343a40;
+            --light: #f8f9fa;
+            --accent: #ffc107;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .logo h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu li {
+            margin-left: 1.5rem;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .menu a:hover {
+            color: var(--primary);
+        }
+        
+        .menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .menu a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .hero {
+            background: url('/api/placeholder/1200/400') center/cover;
+            padding: 8rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #004494;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e0a800;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .broker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .broker-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .broker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .broker-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .broker-img img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+        
+        .broker-info {
+            padding: 1.5rem;
+        }
+        
+        .broker-info h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .broker-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .broker-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .broker-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .broker-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .cta {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        .features-section {
+            background-color: #fff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .feature-title {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .about-section {
+            background-color: #f9f9f9;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            height: 400px;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .faq {
+            background-color: #fff;
+        }
+        
+        .accordion {
+            margin-top: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .accordion-title {
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .accordion-title:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .accordion-title h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .accordion-content.active {
+            padding: 1.5rem;
+            max-height: 1000px;
+        }
+        
+        .accordion-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        
+        .accordion-title.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .contact {
+            background-color: #f9f9f9;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            padding: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 1rem;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .contact-details p {
+            color: #666;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s;
+                z-index: 1000;
+            }
+            
+            .menu.active {
+                right: 0;
+            }
+            
+            .menu li {
+                margin: 1rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .page-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .page-content h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-content h3 {
+            color: var(--dark);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .page-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .page-content ul, .page-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .page-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .bonus-tag {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <div class="container">
+            <div class="logo">
+                <img src="AQMarketslogo.png" alt="AQ Markets" style="height: 60px;">
+                <p class="tagline">Your Guide to Elite Forex Brokers</p>
+            </div>
+        </div>
+    </header>
+
+   <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="AQMarketslogo.png" alt="AQ Markets" style="height: 40px;">
+            </div>
+            <div class="mobile-toggle">
+                <i>≡</i>
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#deposit-bonuses">Deposit Bonuses</a></li>
+                <li><a href="#no-deposit-bonuses">No-Deposit Bonuses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#imprint">Imprint</a></li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero" style="background-image: url('heroimage.png');">
+        <div class="hero-content">
+            <h2>Find Your Perfect Forex Broker</h2>
+            <p>Compare the best forex brokers with exclusive bonus offers and start trading with confidence.</p>
+            <a href="#deposit-bonuses" class="btn">Explore Deposit Bonuses</a>
+            <a href="#no-deposit-bonuses" class="btn btn-accent">Get No-Deposit Bonuses</a>
+        </div>
+    </div>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose AQ Markets</h2>
+                <p>We help traders find the most reputable forex brokers with the best bonus offers and trading conditions.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Comprehensive Reviews</h3>
+                    <p>We analyze each broker with meticulous attention to detail to provide you with accurate and unbiased information.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Exclusive Bonuses</h3>
+                    <p>Access special bonus offers negotiated directly with top forex brokers, available only through AQ Markets.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Safety First</h3>
+                    <p>We only recommend regulated brokers with strong security measures to protect your investments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deposit-bonuses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Top Forex Brokers with Deposit Bonuses</h2>
+                <p>Maximize your trading capital with these generous deposit bonus offers from leading forex brokers.</p>
+            </div>
+            <div class="broker-grid">
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="TradePro FX">
+                    </div>
+                    <div class="broker-info">
+                        <h3>TradePro FX</h3>
+                        <p><span class="bonus-tag">100% Deposit Bonus</span></p>
+                        <p>Double your initial deposit up to $5,000 with TradePro FX's premium welcome offer for new traders.</p>
+                        <ul class="broker-features">
+                            <li>Minimum deposit: $250</li>
+                            <li>Regulated by FCA, ASIC</li>
+                            <li>Leverages up to 1:500</li>
+                            <li>60-day bonus period</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="Global Markets Pro">
+                    </div>
+                    <div class="broker-info">
+                        <h3>Global Markets Pro</h3>
+                        <p><span class="bonus-tag">75% Deposit Bonus</span></p>
+                        <p>Receive a 75% bonus on your deposit up to $10,000 with fast withdrawal processing and premium tools.</p>
+                        <ul class="broker-features">
+                            <li>Minimum deposit: $500</li>
+                            <li>Regulated by CySEC, FSA</li>
+                            <li>Leverages up to 1:400</li>
+                            <li>90-day bonus period</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="Prime Trading">
+                    </div>
+                    <div class="broker-info">
+                        <h3>Prime Trading</h3>
+                        <p><span class="bonus-tag">50% Deposit Bonus</span></p>
+                        <p>Get a 50% bonus on deposits up to $20,000 with Prime Trading's loyalty program for serious traders.</p>
+                        <ul class="broker-features">
+                            <li>Minimum deposit: $1,000</li>
+                            <li>Regulated by ASIC, DFSA</li>
+                            <li>Leverages up to 1:300</li>
+                            <li>Unlimited bonus period</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-content">
+                <h2>Understanding Forex Deposit Bonuses</h2>
+                <p>Forex deposit bonuses are promotional offers where brokers add extra funds to your trading account when you make a deposit. These bonuses can significantly increase your trading capital, allowing you to take larger positions or trade more frequently without risking additional personal funds.</p>
+                
+                <h3>Types of Deposit Bonuses</h3>
+                <p>Different brokers offer various types of deposit bonuses, each with their own advantages:</p>
+                <ul>
+                    <li><strong>Welcome Bonuses:</strong> Offered to new clients making their first deposit, these typically range from 20% to 100% of your initial deposit amount.</li>
+                    <li><strong>Reload Bonuses:</strong> Available to existing clients making additional deposits, usually at a lower percentage than welcome bonuses.</li>
+                    <li><strong>Tiered Bonuses:</strong> The bonus percentage increases based on the deposit amount, incentivizing larger deposits.</li>
+                    <li><strong>Loyalty Bonuses:</strong> Recurring deposit bonuses offered to long-term clients as part of VIP or loyalty programs.</li>
+                </ul>
+                
+                <h3>Important Factors to Consider</h3>
+                <p>Before claiming a deposit bonus, be sure to understand:</p>
+                <ul>
+                    <li><strong>Withdrawal Conditions:</strong> Most bonuses require you to trade a specific volume before the bonus and profits can be withdrawn.</li>
+                    <li><strong>Time Limits:</strong> Many bonuses expire after a certain period if the trading requirements aren't met.</li>
+                    <li><strong>Eligible Markets:</strong> Some bonuses may only be used for trading specific instruments or markets.</li>
+                    <li><strong>Maximum Bonus Amount:</strong> Even with high percentage offers, there's usually a cap on the total bonus value.</li>
+                </ul>
+                
+                <h3>Comparing Top Deposit Bonus Offers</h3>
+                <p>When evaluating deposit bonuses, look beyond just the percentage. Consider the broker's overall offering, including:</p>
+                <ul>
+                    <li>Regulatory status and reputation</li>
+                    <li>Trading conditions (spreads, commissions, execution speed)</li>
+                    <li>Platform features and tools</li>
+                    <li>Customer support quality</li>
+                    <li>Ease of deposit and withdrawal</li>
+                </ul>
+                
+                <p>The best deposit bonus is one that enhances your trading experience without imposing unreasonable restrictions. At AQ Markets, we carefully vet each broker to ensure they offer fair and transparent bonus terms alongside quality trading services.</p>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Broker</th>
+                            <th>Bonus %</th>
+                            <th>Max Bonus</th>
+                            <th>Min Deposit</th>
+                            <th>Trading Volume</th>
+                            <th>Validity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TradePro FX</td>
+                            <td>100%</td>
+                            <td>$5,000</td>
+                            <td>$250</td>
+                            <td>20x bonus</td>
+                            <td>60 days</td>
+                        </tr>
+                        <tr>
+                            <td>Global Markets Pro</td>
+                            <td>75%</td>
+                            <td>$10,000</td>
+                            <td>$500</td>
+                            <td>15x bonus</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <td>Prime Trading</td>
+                            <td>50%</td>
+                            <td>$20,000</td>
+                            <td>$1,000</td>
+                            <td>10x bonus</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Forex Capital</td>
+                            <td>30%</td>
+                            <td>$3,000</td>
+                            <td>$100</td>
+                            <td>5x bonus</td>
+                            <td>45 days</td>
+                        </tr>
+                        <tr>
+                            <td>Alpha Trading</td>
+                            <td>200%</td>
+                            <td>$2,000</td>
+                            <td>$200</td>
+                            <td>25x bonus</td>
+                            <td>30 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="no-deposit-bonuses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Forex Brokers with No-Deposit Bonuses</h2>
+                <p>Start trading without risking your own capital with these exclusive no-deposit bonus offers.</p>
+            </div>
+            <div class="broker-grid">
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="FX Trader Plus">
+                    </div>
+                    <div class="broker-info">
+                        <h3>FX Trader Plus</h3>
+                        <p><span class="bonus-tag">$50 No-Deposit Bonus</span></p>
+                        <p>Receive $50 trading credit instantly upon account verification with no deposit required.</p>
+                        <ul class="broker-features">
+                            <li>ID verification required</li>
+                            <li>Regulated by FCA, ASIC</li>
+                            <li>Withdrawable profits after 5 lots</li>
+                            <li>30-day offer validity</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="MarketWave">
+                    </div>
+                    <div class="broker-info">
+                        <h3>MarketWave</h3>
+                        <p><span class="bonus-tag">$30 No-Deposit Bonus</span></p>
+                        <p>Get $30 free trading credit with mobile app download and account verification.</p>
+                        <ul class="broker-features">
+                            <li>Phone verification required</li>
+                            <li>Regulated by CySEC, FSC</li>
+                            <li>Withdrawable after 3 lots traded</li>
+                            <li>14-day bonus expiry</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="broker-card">
+                    <div class="broker-img">
+                        <img src="/api/placeholder/200/100" alt="Quantum Forex">
+                    </div>
+                    <div class="broker-info">
+                        <h3>Quantum Forex</h3>
+                        <p><span class="bonus-tag">$100 No-Deposit Bonus</span></p>
+                        <p>Receive $100 trading credit with complete KYC verification and social media follow.</p>
+                        <ul class="broker-features">
+                            <li>Full KYC verification required</li>
+                            <li>Regulated by DFSA, IFSC</li>
+                            <li>Withdrawable after 10 lots traded</li>
+                            <li>21-day bonus validity</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="#" class="btn">Claim Bonus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-content">
+                <h2>The Ultimate Guide to No-Deposit Forex Bonuses</h2>
+                <p>No-deposit forex bonuses offer an excellent opportunity for traders to experience real trading conditions without risking personal capital. These promotional offers provide free trading credit simply for opening and verifying a new trading account.</p>
+                
+                <h3>Benefits of No-Deposit Bonuses</h3>
+                <p>These bonuses provide several advantages for both new and experienced traders:</p>
+                <ul>
+                    <li><strong>Risk-Free Trading:</strong> Test a broker's platform, execution speed, and services with real money but no financial risk.</li>
+                    <li><strong>Market Experience:</strong> Practice trading psychology and strategy execution in live market conditions.</li>
+                    <li><strong>Potential Profits:</strong> With skilled trading, you can generate withdrawable profits without any initial investment.</li>
+                    <li><strong>Platform Familiarization:</strong> Learn the features and tools of a broker's platform before committing your own funds.</li>
+                </ul>
+                
+                <h3>Common Requirements and Restrictions</h3>
+                <p>No-deposit bonuses typically come with specific conditions that traders should understand:</p>
+                <ul>
+                    <li><strong>Verification Requirements:</strong> Most brokers require identity verification, phone verification, or complete KYC procedures.</li>
+                    <li><strong>Trading Volume:</strong> To withdraw profits, you'll usually need to trade a specified volume (measured in lots).</li>
+                    <li><strong>Maximum Withdrawal:</strong> Many brokers cap the amount of profit you can withdraw from a no-deposit bonus.</li>
+                    <li><strong>Time Limitations:</strong> No-deposit bonuses typically expire after a certain period if trading requirements aren't met.</li>
+                    <li><strong>One Per Household:</strong> Most brokers limit these offers to one per person, IP address, or household.</li>
+                </ul>
+                
+                <h3>How to Choose the Best No-Deposit Bonus</h3>
+                <p>When selecting a no-deposit bonus offer, consider these factors:</p>
+                <ul>
+                    <li><strong>Broker Regulation:</strong> Only choose offers from properly regulated brokers to ensure safety and fairness.</li>
+                    <li><strong>Bonus Amount:</strong> Higher amounts provide more trading opportunities but may come with stricter withdrawal conditions.</li>
+                    <li><strong>Trading Conditions:</strong> Check spreads, swap rates, and execution quality to ensure profitable trading is possible.</li>
+                    <li><strong>Withdrawal Terms:</strong> Compare the trading volume requirements and maximum profit withdrawal limits.</li>
+                    <li><strong>Time Constraints:</strong> Longer validity periods give you more time to meet the trading requirements.</li>
+                </ul>
+                
+                <p>At AQ Markets, we carefully assess each no-deposit bonus offer to ensure it provides genuine value to traders. We only recommend promotions from reputable brokers with fair and transparent terms, helping you start your trading journey without unnecessary risk.</p>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Broker</th>
+                            <th>Bonus Amount</th>
+                            <th>Verification</th>
+                            <th>Trading Requirement</th>
+                            <th>Max Withdrawal</th>
+                            <th>Validity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FX Trader Plus</td>
+                            <td>$50</td>
+                            <td>ID Verification</td>
+                            <td>5 lots</td>
+                            <td>$200</td>
+                            <td>30 days</td>
+                        </tr>
+                        <tr>
+                            <td>MarketWave</td>
+                            <td>$30</td>
+                            <td>Phone Verification</td>
+                            <td>3 lots</td>
+                            <td>$150</td>
+                            <td>14 days</td>
+                        </tr>
+                        <tr>
+                            <td>Quantum Forex</td>
+                            <td>$100</td>
+                            <td>Full KYC</td>
+                            <td>10 lots</td>
+                            <td>$300</td>
+                            <td>21 days</td>
+                        </tr>
+                        <tr>
+                            <td>TradeSmart FX</td>
+                            <td>$25</td>
+                            <td>Email + Phone</td>
+                            <td>2 lots</td>
+                            <td>$100</td>
+                            <td>7 days</td>
+                        </tr>
+                        <tr>
+                            <td>ForexWave</td>
+                            <td>$75</td>
+                            <td>ID + Proof of Address</td>
+                            <td>8 lots</td>
+                            <td>$250</td>
+                            <td>28 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About AQ Markets</h2>
+                <p>Learn about our mission and the team behind AQ Markets</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/api/placeholder/600/400" alt="AQ Markets Team">
+                </div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2020 by a team of experienced forex traders and financial analysts, AQ Markets was created to address the lack of transparent and reliable information in the forex broker industry. Our mission is to help traders make informed decisions by providing unbiased reviews, exclusive bonus offers, and educational resources.</p>
+                    <p>The AQ in our name stands for "Analytical Quest," reflecting our commitment to thorough research and data-driven analysis. We believe that every trader deserves access to accurate information and fair trading conditions, regardless of their experience level or trading capital.</p>
+                    <p>Over the years, we've built strong relationships with top forex brokers worldwide, allowing us to negotiate exclusive bonus offers and promotions for our community. Our team personally tests each broker we recommend, ensuring they meet our strict standards for reliability, transparency, and customer service.</p>
+                    <p>Today, AQ Markets serves traders from over 50 countries, helping them find the perfect broker for their trading style and financial goals. Whether you're looking for the highest deposit bonus, a risk-free no-deposit offer, or simply the most reliable trading platform, our mission is to guide you toward the best choice for your specific needs.</p>
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about forex bonuses and brokers</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3>Are forex bonuses worth claiming?</h3>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Forex bonuses can be valuable if you understand the terms and conditions. Deposit bonuses effectively increase your trading capital, allowing for larger positions or more trades. No-deposit bonuses offer risk-free trading experience. However, always check withdrawal requirements, time limitations, and eligible markets before claiming any bonus.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3>How do I withdraw profits from a no-deposit bonus?</h3>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>To withdraw profits from a no-deposit bonus, you typically need to meet the broker's specified trading volume requirements (usually measured in lots). Once you've fulfilled these requirements, you can request a withdrawal of profits up to the maximum amount allowed by the broker. Note that the initial bonus amount itself is usually not withdrawable, only the profits generated from it.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3>Can I claim multiple deposit bonuses from the same broker?</h3>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>This depends on the broker's policy. Some brokers offer welcome bonuses only for first deposits, while others provide reload bonuses for subsequent deposits. Many brokers also have loyalty programs that offer recurring bonuses to regular traders. Check the specific terms of each promotion or contact the broker's customer support for clarification on multiple bonus eligibility.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3>How do I choose between brokers with similar bonus offers?</h3>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>When brokers offer similar bonuses, consider these additional factors: regulatory status (choose well-regulated brokers for better security), trading conditions (spreads, commissions, execution speed), platform features and stability, customer support quality and availability, and ease of deposits and withdrawals. The best broker is one that offers a good balance of favorable trading conditions alongside attractive bonus terms.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">
+                        <h3>Are forex bonuses available in all countries?</h3>
+                        <div class="accordion-icon">▼</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>No, bonus availability varies by region due to different regulatory requirements. Some countries restrict or prohibit trading bonuses entirely. For example, brokers regulated by ESMA (European Securities and Markets Authority) cannot offer bonuses to European clients. Always check if a bonus is available in your country before attempting to claim it, or contact the broker's support team for clarification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions or suggestions? Reach out to our team</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Trading Avenue, Suite 456</p>
+                            <p>Financial District, London EC3V 4QT</p>
+                            <p>United Kingdom</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+44 20 7946 0213</p>
+                            <p>Monday to Friday, 9am - 5pm GMT</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@aq-products.com</p>
+                            <p>support@aq-products.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h4>Social Media</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link">FB</a>
+                                <a href="#" class="social-link">TW</a>
+                                <a href="#" class="social-link">IG</a>
+                                <a href="#" class="social-link">LI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="imprint" style="display: none;">
+        <div class="container">
+            <div class="page-content">
+                <h2>Imprint</h2>
+                <h3>Company Information</h3>
+                <p><strong>AQ Markets Ltd.</strong><br>
+                123 Trading Avenue, Suite 456<br>
+                Financial District, London EC3V 4QT<br>
+                United Kingdom</p>
+                
+                <p><strong>Contact:</strong><br>
+                Phone: +44 20 7946 0213<br>
+                Email: info@aq-products.com</p>
+                
+                <p><strong>Registration:</strong><br>
+                Company Registration Number: 12345678<br>
+                VAT ID: GB123456789</p>
+                
+                <h3>Responsible for Content</h3>
+                <p><strong>Managing Director:</strong> Michael Anderson<br>
+                <strong>Content Director:</strong> Sarah Thompson</p>
+                
+                <h3>Regulatory Information</h3>
+                <p>AQ Markets Ltd. is an independent forex broker comparison service. We are not a financial service provider, broker, or investment advisor. The information provided on this website is for general informational purposes only and does not constitute financial advice.</p>
+                
+                <h3>Disclaimer</h3>
+                <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange, you should carefully consider your investment objectives, level of experience, and risk appetite.</p>
+                
+                <p>The possibility exists that you could sustain a loss of some or all of your initial investment and, therefore, you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                
+                <p>Any opinions, news, research, analyses, prices, or other information contained on this website is provided as general market commentary and does not constitute investment advice. AQ Markets will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy-policy" style="display: none;">
+        <div class="container">
+            <div class="page-content">
+                <h2>Privacy Policy</h2>
+                <p>Last updated: May 10, 2025</p>
+                
+                <h3>1. Introduction</h3>
+                <p>AQ Markets Ltd. ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website aq-products.com (the "Site"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the Site.</p>
+                
+                <h3>2. Collection of Your Information</h3>
+                <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+                
+                <h4>Personal Data</h4>
+                <p>Personally identifiable information that you voluntarily provide to us when registering for an account, signing up for our newsletter, or contacting us, such as your name, email address, phone number, and other information that may identify you.</p>
+                
+                <h4>Derivative Data</h4>
+                <p>Information our servers automatically collect when you access the Site, such as your IP address, browser type, operating system, access times, and the pages you have viewed directly before and after accessing the Site.</p>
+                
+                <h4>Financial Data</h4>
+                <p>Financial information, such as data related to your payment method (e.g., credit card number, bank transfer details) that we may collect when you purchase services from our Site. We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor.</p>
+                
+                <h4>Cookies</h4>
+                <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies on the Site to help customize the Site and improve your experience. Most browsers are set to accept cookies by default. You can remove or reject cookies, but be aware that such action could affect the availability and functionality of the Site.</p>
+                
+                <h3>3. Use of Your Information</h3>
+                <p>We may use the information we collect about you for various purposes, including:</p>
+                <ul>
+                    <li>Providing, maintaining, and improving our Site</li>
+                    <li>Processing transactions</li>
+                    <li>Sending you emails regarding your account or transaction</li>
+                    <li>Sending you newsletters and updates about our services</li>
+                    <li>Responding to your comments, questions, and requests</li>
+                    <li>Monitoring and analyzing usage trends and preferences</li>
+                    <li>Protecting our Site from unauthorized access or activity</li>
+                </ul>
+                
+                <h3>4. Disclosure of Your Information</h3>
+                <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
+                
+                <h4>By Law or to Protect Rights</h4>
+                <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</p>
+                
+                <h4>Third-Party Service Providers</h4>
+                <p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</p>
+                
+                <h4>Marketing Communications</h4>
+                <p>With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes.</p>
+                
+                <h3>5. Security of Your Information</h3>
+                <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+                
+                <h3>6. Your Rights Regarding Your Data</h3>
+                <p>You have certain rights regarding your personal data, including:</p>
+                <ul>
+                    <li>The right to access personal data we hold about you</li>
+                    <li>The right to request correction of inaccurate personal data</li>
+                    <li>The right to request deletion of your personal data</li>
+                    <li>The right to withdraw consent at any time for processing based on consent</li>
+                    <li>The right to object to processing of your personal data</li>
+                    <li>The right to data portability</li>
+                </ul>
+                
+                <h3>7. Contact Us</h3>
+                <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+                <p>AQ Markets Ltd.<br>
+                123 Trading Avenue, Suite 456<br>
+                Financial District, London EC3V 4QT<br>
+                United Kingdom<br>
+                Email: privacy@aq-products.com<br>
+                Phone: +44 20 7946 0213</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>AQ Markets</h3>
+                    <p>Your trusted guide to elite forex brokers with the best bonus offers and trading conditions.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IG</a>
+                        <a href="#" class="social-link">LI</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#deposit-bonuses">Deposit Bonuses</a></li>
+                        <li><a href="#no-deposit-bonuses">No-Deposit Bonuses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#imprint">Imprint</a></li>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates on the latest bonus offers and forex news.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email Address" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 AQ Markets Ltd. All rights reserved.</p>
+                <p>Trading involves risk. Only trade with money you can afford to lose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cookieModal">
+        <div class="modal-content">
+            <div class="close-modal">&times;</div>
+            <h3>Cookie Policy</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By continuing to use our site, you consent to our use of cookies.</p>
+            <button class="btn">Accept All</button>
+            <button class="btn btn-accent">Customize Settings</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+        
+        // Accordion functionality
+        document.querySelectorAll('.accordion-title').forEach(item => {
+            item.addEventListener('click', event => {
+                const content = item.nextElementSibling;
+                
+                // Close all other accordion items
+                document.querySelectorAll('.accordion-content').forEach(el => {
+                    if (el !== content) {
+                        el.classList.remove('active');
+                        el.previousElementSibling.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+        
+        // Cookie modal
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('cookieModal').style.display = 'flex';
+            }, 2000);
+        });
+        
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('cookieModal').style.display = 'none';
+        });
+        
+        // Handle navigation to legal pages
+        document.querySelectorAll('a[href="#imprint"], a[href="#privacy-policy"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide all sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show the target section
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).style.display = 'block';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
