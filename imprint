@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint - AQ Markets Ltd.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        .address {
+            margin: 15px 0;
+        }
+        .contact-info {
+            margin: 15px 0;
+        }
+        .registration {
+            margin: 15px 0;
+        }
+        .responsible {
+            margin: 15px 0;
+        }
+        .disclaimer {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Imprint</h1>
+        
+        <h2>Company Information</h2>
+        <div class="address">
+            <p><strong>AQ Markets Ltd.</strong><br>
+            135 Trading Avenue, Suite 41<br>
+            Financial District, London EC3V 4QT<br>
+            United Kingdom</p>
+        </div>
+        
+        <div class="contact-info">
+            <p><strong>Contact:</strong><br>
+            Phone: +44 20 7946 0213<br>
+            Email: info@aq-products.com</p>
+        </div>
+        
+        <div class="registration">
+            <p><strong>Registration:</strong><br>
+            Company Registration Number: 12345678<br>
+            VAT ID: GB123456789</p>
+        </div>
+        
+        <h2>Responsible for Content</h2>
+        <div class="responsible">
+            <p>Managing Director: Michael Anderson<br>
+            Content Director: Sarah Thompson</p>
+        </div>
+        
+        <h2>Regulatory Information</h2>
+        <p>AQ Markets Ltd. is an independent forex broker comparison service. We are not a financial service provider, broker, or investment advisor. The information provided on this website is for general informational purposes only and does not constitute financial advice.</p>
+        
+        <h2>Disclaimer</h2>
+        <div class="disclaimer">
+            <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange, you should carefully consider your investment objectives, level of experience, and risk appetite.</p>
+            
+            <p>The possibility exists that you could sustain a loss of some or all of your initial investment and, therefore, you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+            
+            <p>Any opinions, news, research, analyses, prices, or other information contained on this website is provided as general market commentary and does not constitute investment advice. AQ Markets will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+        </div>
+    </div>
+</body>
+</html>
